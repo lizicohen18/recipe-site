@@ -1,0 +1,44 @@
+body{color: rgb(66, 62, 62); background-color: rgb(224, 214, 214);}
+        h2{ color: darkred;}
+        #recipe-title{ font-size: 40px; color: darkred;}
+        .highlight{background-color: yellow;}
+        .intro{font-size: 20px; color:rgb(189, 92, 92);}
+        .block {
+    background-color: white;
+    width: 700px;
+    box-shadow: 0 2px 8px gray;
+}
+#main-image{width: 400px; box-shadow: 0 2px 8px gray;}
+#info-table{width: 100%;}
+.side-image{width: 200px; height: 200px;}
+#nav a:hover {
+    color: darkred;
+}
+.block:hover {
+    box-shadow: 0 10px 30px gray;
+}
+.ingredients-list> li:first-child {
+    color: darkred; 
+}
+.steps-list> li:last-child {
+    color: darkred; 
+}
+tbody tr:hover {
+    background-color: rgb(224, 214, 214);
+}
+.ingredients-list li::before {
+    content: "| ";
+    color: green;
+}
+h2::after{
+    content: ":";
+    color: darkred;
+}
+#page-footer p::before {
+    content: "© ";
+}
+.container{width: 900px;}
+/*
+  תשובה א:סלקטור אחד של class כי כך זה הרבה יותר קצר מאשר לכתוב 5 פעמים את אותו עיצוב 
+  תשובה ב:התמונה התכוצה וכדי למנוע את זה היינו צריכים לעשות רק גובה או רוחב ואז התמו נה תסתדר אוטומטית לפי המידות שלה 
+*/
