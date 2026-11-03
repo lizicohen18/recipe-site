@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #f4f6f8;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1rem;
+}
+form{
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow:  0 1px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.field > label,legend{
+    font-weight: bold;
+}
+input:not([type="checkbox"], [type="radio"]), select, textarea { width: 100%; padding: 10px; border: 1px solid #bbb; border-radius: 6px; font-size: 1rem; }
+.options{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+fieldset
+{
+    border-radius: 6px;
+    border: 1px solid #bbb;
+}   
+input:focus, select:focus, textarea:focus{
+    border-color: #2e5597;
+    outline: none;
+}
+input[type="radio"], input[type="checkbox"] { accent-color: #2e5597; }
+button{
+    background-color: #2e5597;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    min-height: 44px;
+    width: 100%;
+}
+button:hover{
+        background-color: #142546;
+ }
+@media (width >= 700px) { form { padding: 2rem; } .row { flex-direction: row; } .row .field { flex: 1; } button { width: auto; align-self: center; }}
+/* סעיף ג */
+    /* 1. השדות והטופס צמודים מדי לקצוות המסך אם אין מספיק שוליים חיצוניים.
+2. אזורי הלחיצה על תיבות הסימון וכפתורי הרדיו קטנים ודורשים דיוק רב במסך מגע צר. */
+/* ב700 פיקסלים זה עובר לשורה */
+/* הפרטים שהכנסנו במתכון נשלחו בקשור */
+/* הדפדפן עושה את זה ע"י required */
+/* שאלה א:id הוא מזהה יחודי לאלמנט וname  הוא שם השדה שמקשר בין השדות לבין הנתונים שנשלחים לשרת. לכפתורי רדיו יש אותו שם כדי לאפשר בחירה של אפשרות אחת בלבד ולדפדפןלהבין שהם קשורים לאותו שדה */
+/* שאלה ב:כי תמיד מתחילים מהקטן ואם יש מקום מגדילים אם ה-Media Query היה נכתב בהתחלה (לפני הכללים הרגילים), הכללים הרגילים שאחריו היו דורסים ומבטלים אותו, והעיצוב לא היה מוחל כראוי. */
+/* שאלה ג:כתובת ה-URL בדפדפן התארכה והוצגו בה הנתונים שהוזנו בצורה של זוגות מפתח-ערך. זה מלמד שהדפדפן משתמש בתכונה name בתור המפתח כדי לשייך כל ערך שהוזן לשם השדה המקורי שלו בעת שליחת הטופס. */
